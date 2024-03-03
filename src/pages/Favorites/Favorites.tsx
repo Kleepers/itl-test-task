@@ -1,6 +1,8 @@
 import {UserTable} from "@/features/usersTable";
 import useUsersStore from "../../features/usersTable/store/users.ts";
 import {useEffect} from "react";
+import Typography from "@/shared/Typography/Typography.tsx";
+import './Favorites.scss'
 
 export const Favorites = () => {
 
@@ -13,6 +15,14 @@ export const Favorites = () => {
             fetchUsers()
         }
     }, [])
+
+    if (!favoriteUsers.length) {
+        return (
+            <div>
+                <Typography className={'empty-state'} variant={'header-bold'}>Вы пока никого не добавили в избранное 😭</Typography>
+            </div>
+        )
+    }
 
     return (
         <>

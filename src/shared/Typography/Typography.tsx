@@ -20,7 +20,6 @@ const Typography = ({ component: Component = 'p', children, variant = 'body', co
         className={cn(className, {
             [`typography--variant-${variant}`]: variant,
             [`typography--color-${color}`]: color,
-
         })}
         {...props}>{children}</Component>;
 };
