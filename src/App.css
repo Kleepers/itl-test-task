@@ -2,8 +2,9 @@
   background: var(--bg-main);
   color: var(--text);
   font-family: "Martian Mono", sans-serif;
-  padding: 0 120px;
-  height: 100vh;
+  padding: 0 120px 20px 120px;
+  min-height: 100vh;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 

@@ -1,0 +1,25 @@
+.wrapper {
+  width: 245px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  background: var(--bg-secondary);
+  border-radius: 18px;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    background: var(--bg-hover);
+  }
+}
+
+.description {
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
