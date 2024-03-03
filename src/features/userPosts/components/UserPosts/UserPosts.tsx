@@ -11,10 +11,14 @@ const UserPosts = (props: TUserProps) => {
     const {userId} = props;
 
     const [posts, setPosts] = useState<TPost[]>([])
+    // const [isLoading, setIsLoading] = useState<boolean>(true)
+    // const [isError, setIsError] = useState<boolean>(false)
+    // or use react-query
 
     useEffect(() => {
 
         const fetchPosts = async () => {
+            // try catch -> setIsError, setIsLoading
             const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
             const data = await response.json() as TPost[]
             setPosts(data)
@@ -22,6 +26,9 @@ const UserPosts = (props: TUserProps) => {
 
         fetchPosts()
     }, [])
+
+    // if (isLoading) ...
+    // if (isError) ...
 
     return (
         <div>
